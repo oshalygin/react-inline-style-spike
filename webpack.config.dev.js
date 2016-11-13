@@ -1,16 +1,16 @@
-var path = require('path')
-var webpack = require('webpack')
+var path = require("path")
+var webpack = require("webpack")
 
 module.exports = {
-  devtool: 'eval',
+  devtool: "eval",
   entry: [
-    'webpack-hot-middleware/client',
-    './src/index'
+    "webpack-hot-middleware/client",
+    "./src/index"
   ],
   output: {
-    path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js',
-    publicPath: '/static/'
+    path: path.join(__dirname, "dist"),
+    filename: "bundle.js",
+    publicPath: "/static/"
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
@@ -18,12 +18,12 @@ module.exports = {
   ],
   module: {
     loaders: [{
-      test: /\.js$/,
-      loaders: ['babel'],
-      include: path.join(__dirname, 'src')
+      test: /\.jsx?$/,
+      exclude: /node_modules/,
+      loaders: ["babel"]
     }, {
-      test: /\.jpg/, 
-      loader: 'file'
+      test: /\.jpg/,
+      loader: "file"
     }]
   }
-}
+};
