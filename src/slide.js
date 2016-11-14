@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react";
 
-const { object, string } = React.PropTypes
+const { object, string } = React.PropTypes;
 
 function Slide(props) {
   return (
@@ -11,13 +11,14 @@ function Slide(props) {
         <div>{props.children}</div>
       </footer>
     </article>
-  )
+  );
 }
 
 Slide.propTypes = {
   image: string.isRequired,
   style: object,
-  title: string
-}
+  title: string,
+  children: object
+};
 
-export default Slide
+export default Slide;

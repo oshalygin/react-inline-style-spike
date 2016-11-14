@@ -1,5 +1,5 @@
-import React from 'react'
+import React from "react";
 
-export default function Frame({ children }) {
-  return <div>{children}</div>
+export default function Frame({ children }) { //eslint-disable-line
+  return <div>{children}</div>;
 }

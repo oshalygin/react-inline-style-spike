@@ -1,17 +1,17 @@
-import React from 'react'
+import React from "react";
 
-const { node, number } = React.PropTypes
+const { node, number } = React.PropTypes;
 
 function renderSlides(props) {
-  return React.Children.map(props.children, (slide, i) => {
+  return React.Children.map(props.children, (slide, iterator) => {
     return React.cloneElement(slide, {
       style: {
         ...slide.props.style,
         width: props.width,
-        left: props.width * (i - props.showIndex)
+        left: props.width * (iterator - props.showIndex)
       }
-    })
-  })
+    });
+  });
 }
 
 function Carousel(props) {
@@ -20,13 +20,13 @@ function Carousel(props) {
       {renderSlides(props)}
       {props.nav}
     </div>
-  )
+  );
 }
 
 Carousel.propTypes = {
   nav: node.isRequired,
   showIndex: number,
   width: number
-}
+};
 
-export default Carousel
+export default Carousel;

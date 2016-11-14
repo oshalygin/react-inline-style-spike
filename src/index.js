@@ -1,6 +1,6 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React from "react";
+import ReactDOM from "react-dom";
 
-import DriftApp from './app'
+import DriftApp from "./app";
 
-ReactDOM.render(<DriftApp />, document.getElementById('app'))
+ReactDOM.render(<DriftApp />, document.getElementById("app"));
