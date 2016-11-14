@@ -14,6 +14,10 @@ const button = {
     userSelect: "none"
 };
 
+const hidden =  {
+    visibility: "hidden"
+};
+
 const prev = {
     ...button,
     textAlign: "left"
@@ -34,5 +38,14 @@ export default {
         display: "flex"
     },
     prev,
-    next
+    prevHidden: {
+        ...prev,
+        ...hidden
+    },
+    next,
+    nextHidden: {
+        ...next,
+        ...hidden
+    }
+
 };
