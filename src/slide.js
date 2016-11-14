@@ -1,6 +1,6 @@
 import React from "react";
 
-const { object, string } = React.PropTypes;
+const { object, string, any } = React.PropTypes;
 
 function Slide(props) {
   return (
@@ -18,7 +18,7 @@ Slide.propTypes = {
   image: string.isRequired,
   style: object,
   title: string,
-  children: object
+  children: any
 };
 
 export default Slide;

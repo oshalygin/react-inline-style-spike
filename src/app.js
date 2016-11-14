@@ -1,4 +1,3 @@
-import autobind from "autobind-decorator";
 import React from "react";
 
 import Carousel from "./carousel";
@@ -6,12 +5,22 @@ import Frame from "./frame";
 import Nav from "./nav";
 import Slide from "./slide";
 
-@autobind //eslint-disable-line
+
 export default class DriftApp extends React.Component {
-  state = {
-    showIndex: 0,
-    numSlides: 5
+
+  constructor(props, context) {
+    super(props, context);
+
+    this.state = {
+      showIndex: 0,
+      numSlides: 5
+    };
+
+    this.handleClickPrevious = this.handleClickPrevious.bind(this);
+    this.handleClickNext = this.handleClickNext.bind(this);
+    this.renderNav = this.renderNav.bind(this);
   }
+
   handleClickPrevious() {
     this.setState({
       showIndex: Math.max(this.state.showIndex - 1, 0)
