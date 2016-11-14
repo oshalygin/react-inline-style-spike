@@ -4,7 +4,7 @@
   "description": "Image slider in react",
   "main": "index.js",
   "scripts": {
-    "start": "node dev-server.js",
+    "start": "babel-node dev-server.js",
     "lint": "esw webpack.config.* src --color"
   },
   "repository": {
