@@ -14,7 +14,7 @@ const button = {
     userSelect: "none"
 };
 
-const hidden =  {
+const hidden = {
     visibility: "hidden"
 };
 
