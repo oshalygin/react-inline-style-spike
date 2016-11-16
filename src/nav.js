@@ -1,7 +1,7 @@
-import React from "react";
-import Radium from "radium";
+import React from 'react';
+import Radium from 'radium';
 
-import styles from "./nav-styles";
+import styles from './nav-styles';
 
 const { func, bool } = React.PropTypes;
 
@@ -16,8 +16,8 @@ function getNextStyles(props) {
 function Nav(props) {
   return (
     <div style={styles.root}>
-      <button key="prev" style={getPreviousStyles(props)} onClick={props.onPrevious}>&#10094;</button>
-      <button key="next" style={getNextStyles(props)} onClick={props.onNext}>&#10095;</button>
+      <button key='prev' style={getPreviousStyles(props)} onClick={props.onPrevious}>&#10094;</button>
+      <button key='next' style={getNextStyles(props)} onClick={props.onNext}>&#10095;</button>
     </div>
   );
 }

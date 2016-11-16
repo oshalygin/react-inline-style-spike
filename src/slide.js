@@ -1,6 +1,6 @@
-import React from "react";
-import Radium from "radium";
-import styles from "./slide-styles";
+import React from 'react';
+import Radium from 'radium';
+import styles from './slide-styles';
 
 const { object, string, any } = React.PropTypes;
 

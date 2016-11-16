@@ -1,9 +1,9 @@
-import config from "./config-styles.js";
+import config from './config-styles.js';
 
 export default {
     root: {
-        position: "relative",
-        overflow: "hidden",
+        position: 'relative',
+        overflow: 'hidden',
         height: config.imageHeight
     }
 };

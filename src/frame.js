@@ -1,7 +1,7 @@
-import React from "react";
-import Radium from "radium";
+import React from 'react';
+import Radium from 'radium';
 
-import styles from "./frame-styles.js";
+import styles from './frame-styles.js';
 
 function Frame({ children }) { //eslint-disable-line
   return <div style={styles.root}>{children}</div>;

@@ -1,7 +1,7 @@
-import React from "react";
-import Radium from "radium";
+import React from 'react';
+import Radium from 'radium';
 
-import styles from "./carousel-styles";
+import styles from './carousel-styles';
 
 const { node, number } = React.PropTypes;
 
