@@ -1,15 +1,13 @@
 import React from 'react';
-import { Style } from 'radium';
 import Carousel from './carousel';
 import Frame from './frame';
 import Nav from './nav';
 import Slide from './slide';
+import CSSModules from 'react-css-modules';
+import styles from './app.css';
 
-import styles from './app-styles';
-import configStyles from './config-styles';
 
-
-export default class DriftApp extends React.Component {
+class DriftApp extends React.Component {
 
   constructor(props, context) {
     super(props, context);
@@ -25,11 +23,13 @@ export default class DriftApp extends React.Component {
   }
 
   handleClickPrevious() {
+    console.log("clicked previous");
     this.setState({
       showIndex: Math.max(this.state.showIndex - 1, 0)
     });
   }
   handleClickNext() {
+    console.log("clicked next");
     this.setState({
       showIndex: Math.min(this.state.showIndex + 1, this.state.numSlides - 1)
     });
@@ -42,10 +42,10 @@ export default class DriftApp extends React.Component {
       hasNext={this.state.showIndex < this.state.numSlides - 1} />);
   }
   render() {
+
     return (
       <Frame>
-        <Style rules={styles} />
-        <Carousel showIndex={this.state.showIndex} nav={this.renderNav()} width={configStyles.imageWidth}>
+        <Carousel showIndex={this.state.showIndex} nav={this.renderNav()} width={640}>
           <Slide image={require('./images/1.jpg')} title='Imperial Mockery'>
             In a show of defiance, rebels have again made mockery of the majesty that is service to the Empire.
             These objects were immediately removed from the reflecting pool in Coruscant's Central Square when found
@@ -72,3 +72,5 @@ export default class DriftApp extends React.Component {
     );
   }
 }
+export default DriftApp;
+// export default CSSModules(DriftApp, styles);

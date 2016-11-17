@@ -1,0 +1,10 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Helvetica Nue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.4em;
+    background-color: #1D272F;
+}

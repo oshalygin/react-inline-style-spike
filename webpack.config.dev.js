@@ -26,8 +26,11 @@ module.exports = {
       test: /\.jpg/,
       loader: 'file'
     }, {
-      test: /\.css/,
-      loaders: ['style', 'css', 'cssnext']
+      test: /\.css$/,
+      loaders: [
+        'style?sourceMap',
+        'css?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]'
+      ]
     }
     ]
   }

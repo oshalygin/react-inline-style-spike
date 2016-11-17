@@ -1,11 +1,11 @@
 import React from 'react';
-import Radium from 'radium';
-
-import styles from './carousel-styles';
+import CSSModules from 'react-css-modules';
+import styles from './carousel.css';
 
 const { node, number } = React.PropTypes;
 
 function renderSlides(props) {
+  console.log(props)
   return React.Children.map(props.children, (slide, iterator) => {
     return React.cloneElement(slide, {
       style: {
@@ -19,7 +19,7 @@ function renderSlides(props) {
 
 function Carousel(props) {
   return (
-    <div style={styles.root}>
+    <div className={styles.root}>
       {renderSlides(props)}
       {props.nav}
     </div>
@@ -32,4 +32,4 @@ Carousel.propTypes = {
   width: number
 };
 
-export default Radium(Carousel);
+export default Carousel;;

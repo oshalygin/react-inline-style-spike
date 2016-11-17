@@ -1,15 +1,15 @@
 import React from 'react';
-import Radium from 'radium';
-import styles from './slide-styles';
+import CSSModules from 'react-css-modules';
+import styles from './slides.css';
 
 const { object, string, any } = React.PropTypes;
 
 function Slide(props) {
   return (
-    <article style={[styles.root, props.style]}>
+    <article className={styles.root}>
       <img src={props.image} alt={props.title} />
-      <footer style={styles.footer}>
-        <h2 style={styles.title}>{props.title}</h2>
+      <footer className={styles.footer}>
+        <h2 className={styles.title}>{props.title}</h2>
         <div>{props.children}</div>
       </footer>
     </article>
@@ -23,4 +23,4 @@ Slide.propTypes = {
   children: any
 };
 
-export default Radium(Slide);
+export default CSSModules(Slide, styles);
