@@ -5,7 +5,6 @@ import styles from './carousel.css';
 const { node, number } = React.PropTypes;
 
 function renderSlides(props) {
-  console.log(props)
   return React.Children.map(props.children, (slide, iterator) => {
     return React.cloneElement(slide, {
       style: {
@@ -32,4 +31,4 @@ Carousel.propTypes = {
   width: number
 };
 
-export default Carousel;;
+export default CSSModules(Carousel, styles);

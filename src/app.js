@@ -6,7 +6,7 @@ import Slide from './slide';
 import CSSModules from 'react-css-modules';
 import styles from './app.css';
 
-
+@CSSModules(styles)
 class DriftApp extends React.Component {
 
   constructor(props, context) {
@@ -23,13 +23,11 @@ class DriftApp extends React.Component {
   }
 
   handleClickPrevious() {
-    console.log("clicked previous");
     this.setState({
       showIndex: Math.max(this.state.showIndex - 1, 0)
     });
   }
   handleClickNext() {
-    console.log("clicked next");
     this.setState({
       showIndex: Math.min(this.state.showIndex + 1, this.state.numSlides - 1)
     });
